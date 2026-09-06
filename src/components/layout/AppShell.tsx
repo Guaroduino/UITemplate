@@ -5,6 +5,7 @@ import { FusionHeader } from '../ui/FusionHeader';
 import { SidebarRight } from '../ui/SidebarRight';
 import { BottomBar } from '../ui/BottomBar';
 import { ToolContextPanel } from '../ui/ToolContextPanel';
+import { SelectionContextBar } from '../ui/SelectionContextBar';
 import { WorkspaceNotice } from '../ui/WorkspaceNotice';
 import { SettingsModal } from '../ui/SettingsModal';
 import { CanvasViewport3D } from '../viewport/CanvasViewport3D';
@@ -34,7 +35,10 @@ export const AppShell: React.FC = () => {
             <Canvas2DPlaceholder />
           )}
 
-          {/* Panel Contextual Flotante de Propiedades del Objeto Seleccionado */}
+          {/* Menú Contextual Central Superior (SelectionContextBar) */}
+          <SelectionContextBar />
+
+          {/* Panel Inspector de Propiedades del Objeto a la Derecha */}
           <ToolContextPanel />
 
           {/* Tirador pequeño en el borde derecho cuando el panel lateral está plegado */}
