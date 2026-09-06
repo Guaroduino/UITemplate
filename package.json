@@ -1,24 +1,25 @@
 {
-  "name": "cad-ui-template",
+  "name": "ui-template",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Modular CAD / 3D Studio UI Starter Template",
+  "description": "Modular Application Shell and UI Template",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@react-three/drei": "^10.7.8",
-    "@react-three/fiber": "^9.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^1.39.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "tailwind-merge": "^3.6.0",
-    "three": "^0.174.0",
-    "zustand": "^5.0.3"
+    "three": "^0.174.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.18",

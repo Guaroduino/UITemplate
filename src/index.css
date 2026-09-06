@@ -44,6 +44,17 @@
     --blue-700: #09090b;
     --blue-800: #000000;
     --blue-900: #000000;
+
+    --indigo-50: #f4f4f5;
+    --indigo-100: #e4e4e7;
+    --indigo-200: #d4d4d8;
+    --indigo-300: #a1a1aa;
+    --indigo-400: #71717a;
+    --indigo-500: #27272a;
+    --indigo-600: #09090b;
+    --indigo-700: #09090b;
+    --indigo-800: #000000;
+    --indigo-900: #000000;
   }
 
   .dark {
@@ -85,6 +96,17 @@
     --blue-700: #18181b;
     --blue-800: #09090b;
     --blue-900: #000000;
+
+    --indigo-50: #18181b;
+    --indigo-100: #27272a;
+    --indigo-200: #3f3f46;
+    --indigo-300: #71717a;
+    --indigo-400: #a1a1aa;
+    --indigo-500: #d4d4d8;
+    --indigo-600: #27272a;
+    --indigo-700: #18181b;
+    --indigo-800: #09090b;
+    --indigo-900: #000000;
   }
 
   * {
@@ -133,17 +155,23 @@ html, body {
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* Animación indeterminada */
 @keyframes indeterminate-progress {
-  0% { transform: translateX(-100%); }
-  50% { transform: translateX(20%); }
-  100% { transform: translateX(200%); }
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
 }
 
 .animate-indeterminate {
   animation: indeterminate-progress 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
+/* Ocultar scrollbar pero permitir scroll */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -151,3 +179,30 @@ html, body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@layer utilities {
+  /* Reglas de visibilidad exclusiva: Menú Contextual Superior vs Lateral */
+  /* 1. Menú superior flotante: se muestra SOLO en pantallas angostas o en modo portrait */
+  .contextual-top-bar {
+    display: block;
+  }
+
+  @media (min-width: 1024px) and (orientation: landscape) {
+    .contextual-top-bar {
+      display: none !important;
+    }
+  }
+
+  /* 2. Menú contextual lateral: se muestra SOLO en pantallas anchas y en modo landscape */
+  .contextual-side-panel {
+    display: none !important;
+  }
+
+  @media (min-width: 1024px) and (orientation: landscape) {
+    .contextual-side-panel {
+      display: block !important;
+    }
+  }
+}
+
+

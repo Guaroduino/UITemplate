@@ -53,9 +53,33 @@ export default {
           800: "var(--blue-800)",
           900: "var(--blue-900)",
         },
+        indigo: {
+          50: "var(--indigo-50)",
+          100: "var(--indigo-100)",
+          200: "var(--indigo-200)",
+          300: "var(--indigo-300)",
+          400: "var(--indigo-400)",
+          500: "var(--indigo-500)",
+          600: "var(--indigo-600)",
+          700: "var(--indigo-700)",
+          800: "var(--indigo-800)",
+          900: "var(--indigo-900)",
+        },
+        sky: {
+          50: "var(--blue-50)",
+          100: "var(--blue-100)",
+          200: "var(--blue-200)",
+          300: "var(--blue-300)",
+          400: "var(--blue-400)",
+          500: "var(--blue-500)",
+          600: "var(--blue-600)",
+          700: "var(--blue-700)",
+          800: "var(--blue-800)",
+          900: "var(--blue-900)",
+        },
         cad: {
-          accent: "#007acc",
-          hover: "#0098ff",
+          accent: "var(--blue-600)",
+          hover: "var(--blue-500)",
         }
       },
       borderRadius: {
@@ -66,4 +90,4 @@ export default {
     },
   },
   plugins: [],
-};
+}
